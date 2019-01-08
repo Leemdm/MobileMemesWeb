@@ -6,10 +6,15 @@
     <body>
     <div class="leftPad"><button type="button" class="mMainButtons">Back</button></div>
     <div class="rightPad"><button type="button" onclick="nextMeme()" class="mMainButtons">Next</button></div>
-        <div class="upPad"><button type="button" class="voteButtons" >Good Meme</button></div>
+        <div class="upPad"><button type="button" class="voteButtons" onclick="">Good Meme</button></div>
         <div class="downPad"><button type="button" class="voteButtons">Bad Meme</button></div>
         <div class="tac"><img id="img1" src="images/memetest.jpg" alt="Meme not loading?" height="640" width="480"></div>
-       
+        <div class="debugPad">
+            <h4>Upload to Mobile Memes</h4>
+         <textarea id="texta" rows="2" cols="20"></textarea>
+            <button type=button class="mMainButtons" onclick="debug()">Submit</button>
+            
+        </div>    
         <script>
         var num = 1; 
         function myFunction(a) {
@@ -21,9 +26,16 @@
                 num++;
             }else if(num == 2) {
                 myFunction("images/memetest.jpg");
+                num++;
+            }else if(num == 3) {
+                myFunction("https://i.redd.it/mhcjybwn72921.png");
                 num = 1;
             }
         }
+            function debug() {
+                console.log(document.getElementById("texta").value);
+                myFunction(document.getElementById("texta").value);
+            }
     
         </script>
     

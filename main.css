@@ -79,3 +79,8 @@ font:          normal 700 32px/1 "Calibri", sans-serif;
 text-align:    center;
 text-shadow:   1px 1px #000000;
 }
+.debugPad{
+    color:white;
+    position: fixed;
+    top:100px;
+}
