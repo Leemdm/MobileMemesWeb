@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
 <title>Mobile Memes</title>
-
     <link rel="stylesheet" href="main.css">
     <body>
+    <!--- Created by the Mobile Meme Team (MMT) --->
+        <!-- Buttons for the mainPage.html -->
     <div class="leftPad"><button type="button" class="mMainButtons">Back</button></div>
     <div class="rightPad"><button type="button" onclick="nextMeme()" class="mMainButtons">Next</button></div>
-        <div class="upPad"><button type="button" class="voteButtons" onclick="">Good Meme</button></div>
-        <div class="downPad"><button type="button" class="voteButtons">Bad Meme</button></div>
-        <div class="tac"><img id="img1" src="images/memetest.jpg" alt="Meme not loading?" height="640" width="480"></div>
+    <div class="upPad"><button type="button" class="voteButtons" onclick="">Good Meme</button></div>
+    <div class="downPad"><button type="button" class="voteButtons">Bad Meme</button></div>
+    <div class="tac"><img id="img1" src="images/memetest.jpg" alt="Meme not loading?" height="640" width="480"></div>
+        <!-- Upload meme section -->
         <div class="debugPad">
             <h4>Upload to Mobile Memes</h4>
          <textarea id="texta" rows="2" cols="20"></textarea>
             <button type=button class="mMainButtons" onclick="debug()">Submit</button>
             
-        </div>    
+        </div>
+        <!-- JavaScript for current debuging purposes and button event handling -->
         <script>
         var num = 1; 
-        function myFunction(a) {
-            document.getElementById("img1").src=a;
-        }
+        function memeSelect(a) {document.getElementById("img1").src=a;}
         function nextMeme() {
-            if(num == 1) {
-                myFunction("images/memetest1.jpg");
-                num++;
-            }else if(num == 2) {
-                myFunction("images/memetest.jpg");
-                num++;
-            }else if(num == 3) {
-                myFunction("https://i.redd.it/mhcjybwn72921.png");
-                num = 1;
-            }
+            switch(num) {
+                case 1:
+                    memeSelect("images/memetest1.jpg");
+                    num++;
+                    break;
+                case 2:
+                    memeSelect("images/memetest.jpg");
+                    num++;
+                    break;
+                case 3:
+                    memeSelect("https://i.redd.it/mhcjybwn72921.png");
+                    num = 1;
+                    break;
+            }}
+        function debug() {
+            console.log(document.getElementById("texta").value);
+            memeSelect(document.getElementById("texta").value);
         }
-            function debug() {
-                console.log(document.getElementById("texta").value);
-                myFunction(document.getElementById("texta").value);
-            }
-    
-        </script>
-    
-     </body>
+        </script></body>
 </html>
