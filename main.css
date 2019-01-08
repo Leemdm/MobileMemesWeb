@@ -30,7 +30,7 @@ body{
     padding-left: 300px;
     padding-top: 300px;
 }
-.mMainButtons{
+/*.mMainButtons{
     background:    #0e0e0e;
 background:    -webkit-linear-gradient(#0e0e0e, #ffffff);
 background:    linear-gradient(#0e0e0e, #ffffff);
@@ -42,3 +42,41 @@ font:          normal 700 24px/1 "Calibri", sans-serif;
 text-align:    center;
 text-shadow:   1px 1px #000000;
 }
+*/
+.leftPad{
+    position: fixed;
+    top: 400px;
+}
+.rightPad{
+    position: fixed;
+    left: 1570px;
+    top: 400px;
+}
+.memePad{
+    position: fixed;
+    left: 400px;
+}
+.upPad{
+   position: fixed;
+    top: 800px;
+    left: 370px;
+}
+.downPad{
+    position: fixed;
+    top: 800px;
+    left: 1100px;
+}
+/*
+.voteButtons{
+     background:    #0e0e0e;
+background:    -webkit-linear-gradient(#0e0e0e, #ffffff);
+background:    linear-gradient(#0e0e0e, #ffffff);
+border-radius: 5px;
+padding:       8px 20px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal 700 32px/1 "Calibri", sans-serif;
+text-align:    center;
+text-shadow:   1px 1px #000000;
+}
+*/

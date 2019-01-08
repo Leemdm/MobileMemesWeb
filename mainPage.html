@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
 <title>Mobile Memes</title>
-    <div>
-        <button type="button" class="mMainButton">Upvote</button>
+
+    <link rel="stylesheet" href="main.css">
+    <body>
+    <div class="leftPad"><button type="button" class="mMainButtons">Back</button></div>
+    <div class="rightPad"><button type="button" class="mMainButtons">Next</button></div>
+        <div class="upPad"><button type="button" onclick="console.log('test')" class="voteButtons" >Good Meme</button></div>
+        <div class="downPad"><button type="button" class="voteButtons">Bad Meme</button></div>
+        <div class="tac"><img name="img1"id="img1" src="images/memetest.jpg" alt="Meme not loading?" height="640" width="480"></div>
+        </body>
+            <script>
+        var num = 1; 
+        function myFunction(a) {
+            console.log("Test");
+            document.getElementById("img1").src=a;
+        }
+        function nextMeme() {
+            console.log("works")
+            if(num == 1) {
+                myFunction("images/memetest1.jpg");
+                num++;
+            }else if(num == 2) {
+                myFunction("images/memetest.jpg");
+                num = 1;
+            }
+        }
     
-    </div>
+    </script>
+    
     
 </html>
